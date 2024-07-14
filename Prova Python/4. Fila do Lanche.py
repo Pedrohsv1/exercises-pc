@@ -11,12 +11,14 @@ for _ in range(times):
 
     print(values, copy_values)
 
-    if(qtd_values == 2):
-        if(int(values[0]) < int(values[0])):
-            count = 2
+    if(qtd_values >= 2):
+        if(int(copy_values[0]) < int(copy_values[0])):
+            count = qtd_values
+        else:
+            for x in range(qtd_values):
+                if(values[x] == copy_values[x]):
+                    count += 1
     else:
-        for x in range(qtd_values):
-            if(values[x] == copy_values[x]):
-                count += 1
+        count = 1
     
     print(count)
